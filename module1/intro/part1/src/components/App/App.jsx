@@ -1,34 +1,7 @@
+import Total from "components/Total/Total"
+import Header from "components/Header/Header"
+import Content from "components/Content/Content"
 
-const Part = (props) => {
-    return(
-      <p>
-      {props.part} {props.exo}
-    </p>
-    )
-}
-
-const Content = (props) => {
-  return(
-    <div>
-      <Part part={props.part} exo={props.exo} />
-    </div>
-  )
-}
-
-
-const Header = (props) => {
-    return(
-      <h1>
-        {props.course}
-      </h1>
-    )
-}
-
-const Total = (props) => {
-  return(
-    <p>Number of exercises {props.part1 + props.part2 + props.part3}</p>
-  )
-}
 
 
 const App = () => {
