@@ -4,14 +4,18 @@ import Button from '../Button/Button'
 
 const App = () => {
   const [ counter, setCounter ] = useState(0)
-  const increase = () => setCounter(counter + 1)
-  const resetCounter = () => setCounter(0)
+
+  const changeCount = (delta) => {
+    console.log("change vount")
+    setCounter(counter+delta)
+  }
 
   return (
     <div>
       <Display compteur={counter}/>
-      <Button onClick={increase} texte={"incrementer"} />
-      <Button onClick={resetCounter} texte={"reset"} />
+      <Button changeCount={changeCount} text={"plus"} delta={1} />
+      <Button changeCount={changeCount} text={"zero"} delta={-counter} />
+      <Button changeCount={changeCount} text={"minus"} delta={-1} />
     </div>
   )
 }
